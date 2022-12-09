@@ -4,12 +4,12 @@
 int arr[max];
 
 int front = 0;
-int count = 0;
+int end = 0;
 
-void enque()
+void enqueue()
 {
     int data;
-    if(count>=max)
+    if(end>=max)
     {
         printf("Circular queue is full.\n");
         return;
@@ -18,14 +18,14 @@ void enque()
     {
         printf("Enter data: ");
         scanf("%d",&data);
-        arr[count] = data;
-        count++;
+        arr[end] = data;
+        end++;
     }
 }
 
-void deque()
+void dequeue()
 {
-    if(front==count)
+    if(front==end)
     {
         printf("Circular queue is empty.\n");
         return;
@@ -34,14 +34,14 @@ void deque()
     {
         printf("deleted element from Queue is %d\n",arr[front]);
         front++;
-        count--;
+        end--;
     }
 }
 
 void display()
 {
     int i;
-    if(front == count)
+    if(front == end)
     {
         printf("Queue is Empty.\n");
         return;
@@ -49,15 +49,26 @@ void display()
     else
     {
         printf("Element of Queue: \n");
-        for(i=front; i<count; i++)
+        for(i=front; i<end; i++)
         {
             printf("%d\t",arr[i]);
         }
     }
 }
+void menu()
+{
+    printf("Select flaver and quantity for each item. ypor option are:");
+    printf("\n\n\t MENU \n");
+    printf("--------------------\n");
+    printf("1.Chocolate🍦.\n");
+    printf("2.Vanila🍦.\n");
+    printf("3.Butterschoch🍦.\n");
+    printf("--------------------\n\n"); 
+}
 
 int main()
 {
+
     int option, looper=1;
     while(looper)
     {
