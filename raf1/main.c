@@ -19,18 +19,6 @@ void dequeue(int arr[]){
     }
     printf("Removed element: %d\n",arr[frt]);
     ctr--;
-
-    // comming 1 step forward
-    // 5 8 7 9, frt=0, ctr= 4 ( koyta element)
-    // 0 1 2 3 4 
-
-    // 5 8 7 9  , frt=0, ctr =4
-    // _ 8 7 9  , frt=0, ctr=3
-    // 8 8 7 9 
-
-    // 8 7 9 5  , frt=0, ctr= 4
-    // 0 1 2 3 4 
-
     for(int i=0; i<ctr ; i++){
         arr[i] = arr[i+1];
     }
