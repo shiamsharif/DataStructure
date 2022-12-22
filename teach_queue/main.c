@@ -76,10 +76,10 @@ void take_order(int total_order) {
         ice_cream_two_count = 0;
         ice_cream_three_count = 0;
         while(order_count < 4 && order_count < next_order) {  
-            // printf("=========================\n");
-            // printf("Next Order: %d\n", next_order);
-            // printf("Order Count: %d\n", order_count);
-            // printf("=========================\n");
+            printf("=========================\n");
+            printf("Next Order: %d\n", next_order);
+            printf("Order Count: %d\n", order_count);
+            printf("=========================\n");
             printf("Choose flavour: ");
             scanf("%d", &flavour_choice);
             printf("Enter quantity: ");
